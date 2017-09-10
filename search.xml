@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[react-study]]></title>
+    <url>%2F2017%2F09%2F10%2Fstudy%2F</url>
+    <content type="text"><![CDATA[react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。 父组件向子组件传值比较简单的，this.props就能实现，具体实现方式为： 1234567891011121314151617181920212223242526272829//子组件//在子组件中直接用this.props.dataPlaceholder将值传递过来并且用placeholder接收class InputComponent extends Component &#123; render() &#123; return( &lt;Input style = &#123; InputStyle &#125; placeholder=&#123;this.props.dataPlaceholder&#125; onChange=&#123;this.props.onChange&#125; onBlur=&#123;this.props.inputOnBlur&#125;/&gt; ) &#125;&#125;export default InputComponent;//父组件//父组件中定义一个名为dataPlaceholder的自定义属性class NewCouponName extends Component &#123; render() &#123; // const &#123; onChange &#125; return( &lt;div className="coupon-input"&gt; &lt;span&gt;*名字&lt;/span&gt; &lt;InputComponent dataPlaceholder="10个字以内" onBlur=&#123;this.inputOnBlur&#125; /&gt; &lt;/div&gt; ) &#125;&#125;export default NewCouponName 子组件想父组件传参 1234567891011121314151617181920212223242526272829303132333435363738394041//父组件//在父组件中要写一个方法来接收子组件传过来的值 // 接收搜索的函数 handleSearchValue(params)&#123; let searchData = this.state.searchData; const pagination = &#123; ...this.state.pagination &#125; this.setState(&#123; pagination:&#123; current:1, &#125;, page:1, searchData:&#123; ...params, &#125; &#125;,()=&gt;&#123; let &#123;searchData &#125; = this.state; this.getData(&#123; pageSize: pagination.pageSize, page: 1, ...searchData, &#125;); &#125;); &#125; //子组件 //子组件在获取值的时候，调用父组件传过来的方法，并将获取的值传递过去 handleSearch = (e) =&gt; &#123; e.preventDefault(); this.props.form.validateFields((err, value,) =&gt; &#123; if (err) &#123; return; &#125; // 将子组件search文件中的值，传给父组件 this.props.handleSearchValue(&#123; ...values, &#125;) &#125;); &#125;]]></content>
+      <tags>
+        <tag>react</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[8月份总结]]></title>
     <url>%2F2017%2F08%2F30%2F8%E6%9C%88%E6%80%BB%E7%BB%93-1%2F</url>
     <content type="text"><![CDATA[写在前头 8月份是比较忙碌的一个月，博客停止更新了一个月。 这个月为了完成公司的任务，疯狂写代码，解决各种bug，虽然很累但是感觉也很充实， 之所以停止更新还有一个个人原因。搬了新家，住起来也比原来舒服多了。 这是上班路上拍的一张照片，这一个月做项目，有种得心应手的感觉，antd 框架简直让我们可以提前下班，当然我觉得更好的一件事就是，对于react的理解也越来越熟练，准备把这个月的对于react的积累，全部写进博客里。]]></content>

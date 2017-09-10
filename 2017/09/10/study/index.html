@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="父组件向子组件传函数定义父组件">
+<meta name="description" content="react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。">
 <meta name="keywords" content="react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react 学习">
-<meta property="og:url" content="https://shiyachuang.github.io/2017/07/15/react/index.html">
+<meta property="og:title" content="react-study">
+<meta property="og:url" content="https://shiyachuang.github.io/2017/09/10/study/index.html">
 <meta property="og:site_name" content="年轻就要不停的奔跑">
-<meta property="og:description" content="父组件向子组件传函数定义父组件">
+<meta property="og:description" content="react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-06T16:02:25.000Z">
+<meta property="og:updated_time" content="2017-09-10T07:51:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react 学习">
-<meta name="twitter:description" content="父组件向子组件传函数定义父组件">
+<meta name="twitter:title" content="react-study">
+<meta name="twitter:description" content="react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。">
 
 
 
@@ -165,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="https://shiyachuang.github.io/2017/07/15/react/"/>
+  <link rel="canonical" href="https://shiyachuang.github.io/2017/09/10/study/"/>
 
 
 
 
 
-  <title>react 学习 | 年轻就要不停的奔跑</title>
+  <title>react-study | 年轻就要不停的奔跑</title>
   
 
 
@@ -335,7 +335,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shiyachuang.github.io/2017/07/15/react/">
+    <link itemprop="mainEntityOfPage" href="https://shiyachuang.github.io/2017/09/10/study/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chuang">
@@ -352,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react 学习</h1>
+          <h1 class="post-title" itemprop="name headline">react-study</h1>
         
 
         <div class="post-meta">
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T23:30:00+08:00">
-                2017-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T15:38:20+08:00">
+                2017-09-10
               </time>
             
 
@@ -383,9 +383,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/15/react/#comments" itemprop="discussionUrl">
+                <a href="/2017/09/10/study/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/15/react/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/09/10/study/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -393,7 +393,7 @@
 
           
           
-             <span id="/2017/07/15/react/" class="leancloud_visitors" data-flag-title="react 学习">
+             <span id="/2017/09/10/study/" class="leancloud_visitors" data-flag-title="react-study">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,10 +421,17 @@
       
 
       
-        <h4 id="父组件向子组件传函数"><a href="#父组件向子组件传函数" class="headerlink" title="父组件向子组件传函数"></a>父组件向子组件传函数</h4><p>定义父组件<br><a id="more"></a></p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React,  <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> Test <span class="keyword">from</span> <span class="string">'./Test'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">UIForm</span> <span class="keyword">extends</span> <span class="title">PureComponent</span> </span>&#123;</div><div class="line">handleChange = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(e)</div><div class="line">  &#125;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">           &lt;Test handleChange=&#123;<span class="keyword">this</span>.handleChange&#125; /&gt;</div><div class="line">        &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">      &lt;/</span>div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>定义子组件<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  onChange =<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.props.handleChange(e.target.value)</div><div class="line">  &#125;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;(ref)</span> =&gt;</span> (this.ref = ref)&#125; onChange=&#123;(e) =&gt; this.props.handleChange(e.target.value)&#125; /&gt;</span></div><div class="line"><span class="xml">  &#125;</span></div><div class="line"><span class="xml">&#125;</span></div></pre></td></tr></table></figure></p>
-
+        <blockquote>
+<p>react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。<br><a id="more"></a></p>
+</blockquote>
+<ul>
+<li>父组件向子组件传值比较简单的，this.props就能实现，具体实现方式为：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//子组件</span></div><div class="line"><span class="comment">//在子组件中直接用this.props.dataPlaceholder将值传递过来并且用placeholder接收</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span>(</div><div class="line">      &lt;Input style = &#123; InputStyle &#125; placeholder=&#123;<span class="keyword">this</span>.props.dataPlaceholder&#125; onChange=&#123;<span class="keyword">this</span>.props.onChange&#125; onBlur=&#123;<span class="keyword">this</span>.props.inputOnBlur&#125;/&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> InputComponent;</div><div class="line"></div><div class="line"><span class="comment">//父组件</span></div><div class="line"><span class="comment">//父组件中定义一个名为dataPlaceholder的自定义属性</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewCouponName</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="comment">// const &#123; onChange &#125;</span></div><div class="line">    <span class="keyword">return</span>(</div><div class="line">      &lt;div className=<span class="string">"coupon-input"</span>&gt;</div><div class="line">        &lt;span&gt;*名字&lt;<span class="regexp">/span&gt;</span></div><div class="line"><span class="regexp">        &lt;InputComponent dataPlaceholder="10个字以内" onBlur=&#123;this.inputOnBlur&#125; /</span>&gt;</div><div class="line">      &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">    )</span></div><div class="line"><span class="regexp">  &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">export default NewCouponName</span></div></pre></td></tr></table></figure>
+<ul>
+<li>子组件想父组件传参</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//父组件</span></div><div class="line"><span class="comment">//在父组件中要写一个方法来接收子组件传过来的值</span></div><div class="line"></div><div class="line">  <span class="comment">//  接收搜索的函数</span></div><div class="line">   handleSearchValue(params)&#123;</div><div class="line">     <span class="keyword">let</span> searchData = <span class="keyword">this</span>.state.searchData;</div><div class="line">     <span class="keyword">const</span> pagination = &#123; ...this.state.pagination &#125;</div><div class="line">     <span class="keyword">this</span>.setState(&#123;</div><div class="line">       pagination:&#123;</div><div class="line">         current:<span class="number">1</span>,</div><div class="line">       &#125;,</div><div class="line">       page:<span class="number">1</span>,</div><div class="line">       searchData:&#123;</div><div class="line">         ...params,</div><div class="line">       &#125;</div><div class="line">     &#125;,()=&gt;&#123;</div><div class="line">       <span class="keyword">let</span> &#123;searchData &#125; = <span class="keyword">this</span>.state;</div><div class="line">       <span class="keyword">this</span>.getData(&#123;</div><div class="line">           pageSize: pagination.pageSize,</div><div class="line">           page: <span class="number">1</span>,</div><div class="line">           ...searchData,</div><div class="line">         &#125;);</div><div class="line">     &#125;);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">  <span class="comment">//子组件</span></div><div class="line">  <span class="comment">//子组件在获取值的时候，调用父组件传过来的方法，并将获取的值传递过去</span></div><div class="line"></div><div class="line">   handleSearch = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    e.preventDefault();</div><div class="line">    <span class="keyword">this</span>.props.form.validateFields(<span class="function">(<span class="params">err, value,</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// 将子组件search文件中的值，传给父组件</span></div><div class="line">      <span class="keyword">this</span>.props.handleSearchValue(&#123;</div><div class="line">        ...values,</div><div class="line">      &#125;)</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -487,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/13/weixin/" rel="next" title="关于微信分享的小坑">
-                <i class="fa fa-chevron-left"></i> 关于微信分享的小坑
+              <a href="/2017/08/30/8月总结-1/" rel="next" title="8月份总结">
+                <i class="fa fa-chevron-left"></i> 8月份总结
               </a>
             
           </div>
@@ -496,10 +503,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/21/ES6/" rel="prev" title="ES6 study">
-                ES6 study <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -559,17 +562,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -660,22 +654,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#父组件向子组件传函数"><span class="nav-number">1.</span> <span class="nav-text">父组件向子组件传函数</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -820,9 +798,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://shiyachuang.github.io/2017/07/15/react/';
-          this.page.identifier = '2017/07/15/react/';
-          this.page.title = 'react 学习';
+          this.page.url = 'https://shiyachuang.github.io/2017/09/10/study/';
+          this.page.identifier = '2017/09/10/study/';
+          this.page.title = 'react-study';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://shiyachuang.disqus.com/.disqus.com/embed.js';
