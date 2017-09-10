@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[8月份总结]]></title>
+    <url>%2F2017%2F08%2F30%2F8%E6%9C%88%E6%80%BB%E7%BB%93-1%2F</url>
+    <content type="text"><![CDATA[写在前头 8月份是比较忙碌的一个月，博客停止更新了一个月。 这个月为了完成公司的任务，疯狂写代码，解决各种bug，虽然很累但是感觉也很充实， 之所以停止更新还有一个个人原因。搬了新家，住起来也比原来舒服多了。 这是上班路上拍的一张照片，这一个月做项目，有种得心应手的感觉，antd 框架简直让我们可以提前下班，当然我觉得更好的一件事就是，对于react的理解也越来越熟练，准备把这个月的对于react的积累，全部写进博客里。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6 study]]></title>
+    <url>%2F2017%2F07%2F21%2FES6%2F</url>
+    <content type="text"><![CDATA[let 块级作用域123456use strictif(true) &#123; let fruit = 'apple'&#125;console.log(fruit) //fruit is not defined const 常量123456const name = 'apple'name = 'banana'//Assignment to constant variableconst name = &#123;foo : 'apple' &#125;name.foo = 'banana'//可以正常运行 解构数组123let foo = ['one','two','three']let [one,two,three] =fooconsole.log(one,two,three)// one,two,three 解构对象只需保证key可以对应就行，也可只取name 123let obj = &#123; name:'chuang',age:22,sex:'男'&#125;let &#123;name,age,sex&#125; = objconsole.log(name,age,sex)//chuang 22 男 箭头函数1234567891011let add = (a,b) =&gt; &#123; return a+b &#125;//当后边是表达式的时候也可以简写let add = (a,b) =&gt; a+b// 他们等同于let add =function(a,b)&#123; return a+b&#125;//在回调中也可以使用let nums =[1,2,3]let doublenum = num.map( i =&gt; i*2)console.log(doublenum)//[2,3,6] this 在箭头函数中的作用12345678910let age =2;let student = &#123; age:1, grow: function() &#123; setTimeout(() =&gt; &#123; console.log(++this.age) &#125;,100) &#125;&#125;student.grow()//2 对象表达式123let a=1,b=2;let obj =&#123;a,b&#125;console.log(obj)//Object &#123;a: 1, b: 2&#125; Rest参数当一个函数的最后一参数有’…’ 这样的前缀，他会变成一个参数的数组 12345678funtion test(...args) &#123; console.log(args)&#125;test(2,3,4)//[2，3，4]funtion test2(name,...args) &#123; console.log(args)&#125;test2('chuang',2,3,1)//[2,3,1] 展开操作符 用于函数调用 123function test(x,y,z) &#123;&#125;let args =[0,1,2]test(..args) 用于数字面量 1234let arr1 =[1,2,3]let arr2 =[4,5,6]let arr3 =[...arr1,arr2]console.log(arr3)//[1, 2, 3, 4, 5, 6,] 对象的展开操作符 123let mike = &#123; name: 'chuang',sex: 'male'&#125;mike =&#123;...mike,age:50&#125;console.log(mike)//&#123;name: 'chuang',sex: 'male',age:50&#125;]]></content>
+      <tags>
+        <tag>Es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react 学习]]></title>
+    <url>%2F2017%2F07%2F15%2Freact%2F</url>
+    <content type="text"><![CDATA[父组件向子组件传函数定义父组件 1234567891011121314151617import React, from 'react'import Test from './Test'export default class UIForm extends PureComponent &#123;handleChange = (e) =&gt; &#123; console.log(e) &#125; render () &#123; return ( &lt;div&gt; &lt;div&gt; &lt;Test handleChange=&#123;this.handleChange&#125; /&gt; &lt;/div&gt; &lt;/div&gt; ) &#125;&#125; 定义子组件12345678910import React from 'react'export default class Test extends React.Component &#123; onChange =(e) =&gt; &#123; this.props.handleChange(e.target.value) &#125; render () &#123; return &lt;input ref=&#123;(ref) =&gt; (this.ref = ref)&#125; onChange=&#123;(e) =&gt; this.props.handleChange(e.target.value)&#125; /&gt; &#125;&#125;]]></content>
+      <tags>
+        <tag>react</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于微信分享的小坑]]></title>
+    <url>%2F2017%2F07%2F13%2Fweixin%2F</url>
+    <content type="text"><![CDATA[WeChat share 有关显示在调用分享接口时，安卓部分手机可能显示有误，尝试在调用前延迟1500ms 分享链接有关在将链接分享时 微信会自动将location.search变为分享来源代码 原始链接为 1http://localhost:3000/corp/#/full/try-vote-list?user=15652813691&amp;user_id=710 经过微信分享给朋友后 1http://localhost:3000/corp/?from=singlemessage&amp;isappinstalled=0#/full/try-vote-list?user=18896817619&amp;user_id=777 在该页面下只改变参数进行跳转时，无效 1location.replace(`$&#123;location.origin&#125;/corp/#/full/try-vote-list?user=$&#123;$scope.third&#125;&amp;user_id=$&#123;$scope.currentUser&#125;`) 解决方式 1location.replace(`$&#123;location.origin&#125;/corp/$&#123;location.search&#125;#/full/try-vote-list?user=$&#123;$scope.third&#125;&amp;user_id=$&#123;$scope.currentUser&#125;`) 在进入该页面时，匹配到 &amp;isappinstalled=0，将其直接跳转至去除来源信息的链接]]></content>
+      <tags>
+        <tag>WeChat share</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[angular学习]]></title>
+    <url>%2F2017%2F07%2F12%2Fangular%2F</url>
+    <content type="text"><![CDATA[angular.js 学习 定义class的三种方法 1234567891011121314151617181920212223&lt;html ng-app='myApp'&gt;&lt;head&gt;&lt;style&gt;.red&#123;color: red;&#125;.red2&#123;color: #f0f;&#125;.red3&#123;color: #00f;&#125;.red4&#123;color: #2ff;&#125;&lt;/style&gt;&lt;/head&gt;&lt;body ng-controller="myCtrl"&gt; &lt;p ng-class="&#123;&#123;red&#125;&#125;"&gt;111&lt;/p&gt; &lt;p ng-class="&#123;true: 'red', false: 'red2'&#125;[isActive]"&gt;222&lt;/p&gt; &lt;p ng-class="&#123;'red3': isSelected, 'red4': isCar&#125;"&gt;444&lt;/p&gt;&lt;script src="node_modules\angular\angular.min.js"&gt;&lt;/script&gt;&lt;script&gt; var app = angular.module('myApp', []); app.controller('myCtrl', function($scope) &#123; $scope.red="red"; $scope.isActive = false; $scope.isSelected = true; $scope.isCar = false; &#125;);&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <tags>
+        <tag>angular</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Excel 导出]]></title>
+    <url>%2F2017%2F07%2F04%2Fexcel%2F</url>
+    <content type="text"><![CDATA[先引入Excel 模板 1const xl = require('excel4node');//引入Excel模板 实例化工作簿 12let wb = new xl.Workbook()//实例化工作薄ler ws = wb.addWorksheet('Sheet 1'), //实例化表 自定义style 12345678910111213 const styleFont = &#123; font: &#123; color: '#000000', name: '宋体', size: 12 &#125;, alignment: &#123; horizontal: 'center' &#125;, numberFormat: '#,##0' &#125;;//调用方法ws.cell(1,2).string(value).style(styleFont); 设置每列的宽度 1234//第一行从1-7列设置宽度40_.range(1, 8).forEach((v, i) =&gt; &#123; ws.column(++i).setWidth(40); &#125;) thead 设置 1234const head_title = ['ID', '名字', '电话', '公司', '新增会员数', '新增健康记录', '新增消费记录'] head_title.forEach((v, i) =&gt; &#123; ws.cell(1, ++i).string(v).style(style.title); &#125;); 第一行合并 1234// 第一行合并// ws.cell(startRow, startColumn, [[endRow, endColumn], isMerged]);//isMerged = '是否合并'ws.cell(1, 1, 1, 15, true).string(titleRow).style(styleTitle); last 最后一步 12345res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');res.setHeader("Content-Disposition", `attachment; filename=$&#123;encodeURIComponent('会员信息数据')&#125;.xlsx`);wb.writeToBuffer().then(data =&gt; res.send(data)); 参考资料https://www.npmjs.com/package/excel4node]]></content>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySql 语句整理]]></title>
+    <url>%2F2017%2F06%2F22%2Fmysql%2F</url>
+    <content type="text"><![CDATA[查询结果第一种情况 从第一个表里面拿出来的数据，作为表 a，第二个表作为 b， 第三个作为 c ，a 表中不满足 b 条件被删除，然后和 c 比对 ，不满足 c 被删除，剩下的数据再根据 a 的 where 查出结果 join 代表链接 1234rest.query('select * from 表名 ' ajoin('select ··· from 表名 where 条件 ') b on a.id = b.idjoin('select ··· from 表名 ') c on c.id = a.id where ' a.条件 and a.条件 ') 查询结果第二种情况 select时可以 a.属性名 b.属性名 as name 123rest.query('select a.id, b.id as auit_id, a.name, b.name as nikename... from 表名 ' ajoin('select ··· from 表名 where 条件 ') b on a.id = b.id where ' a.条件 and a.条件 ') 查询数量 DISIINCT = 不重复as = 作为count 123rest.queryOne(' count(DISTINCT(a.user_id)) as count from 表名 ' a join('select ··· from 表名 where 条件 ') b on a.id = b.idjoin('select ··· from 表名 ') c on c.id = a.id where ' a.条件 and a.条件 ') 1234567//点击图片，调用微信预览图片接口 $scope.wxPreview = u =&gt; &#123; wx.previewImage(&#123; current: location.origin + u.screen_shot, urls: [location.origin + u.screen_shot] // 需要预览的图片http链接列表 &#125;); &#125;]]></content>
+      <tags>
+        <tag>MySql</tag>
+      </tags>
+  </entry>
+</search>
