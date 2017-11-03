@@ -110,7 +110,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="react," />
+  <meta name="keywords" content="csv," />
 
 
 
@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。">
-<meta name="keywords" content="react">
+<meta name="description" content="需求公司需求将8万条数据很快的导出，研究了一下，在老大的帮助下成功实现，记录流程希望能帮到你。 写在前面如果说你想导出Excel可以看我之前的一篇文章，有关Excel导出的。">
+<meta name="keywords" content="csv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react-study">
-<meta property="og:url" content="https://shiyachuang.github.io/2017/09/10/study/index.html">
+<meta property="og:title" content="Node使用stream导出CSV">
+<meta property="og:url" content="https://shiyachuang.github.io/2017/09/18/csv/index.html">
 <meta property="og:site_name" content="年轻就要不停的奔跑">
-<meta property="og:description" content="react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。">
+<meta property="og:description" content="需求公司需求将8万条数据很快的导出，研究了一下，在老大的帮助下成功实现，记录流程希望能帮到你。 写在前面如果说你想导出Excel可以看我之前的一篇文章，有关Excel导出的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-10T08:25:28.000Z">
+<meta property="og:updated_time" content="2017-11-03T10:36:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react-study">
-<meta name="twitter:description" content="react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。">
+<meta name="twitter:title" content="Node使用stream导出CSV">
+<meta name="twitter:description" content="需求公司需求将8万条数据很快的导出，研究了一下，在老大的帮助下成功实现，记录流程希望能帮到你。 写在前面如果说你想导出Excel可以看我之前的一篇文章，有关Excel导出的。">
 
 
 
@@ -165,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="https://shiyachuang.github.io/2017/09/10/study/"/>
+  <link rel="canonical" href="https://shiyachuang.github.io/2017/09/18/csv/"/>
 
 
 
 
 
-  <title>react-study | 年轻就要不停的奔跑</title>
+  <title>Node使用stream导出CSV | 年轻就要不停的奔跑</title>
   
 
 
@@ -335,7 +335,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shiyachuang.github.io/2017/09/10/study/">
+    <link itemprop="mainEntityOfPage" href="https://shiyachuang.github.io/2017/09/18/csv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chuang">
@@ -352,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react-study</h1>
+          <h1 class="post-title" itemprop="name headline">Node使用stream导出CSV</h1>
         
 
         <div class="post-meta">
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T15:38:20+08:00">
-                2017-09-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T20:10:23+08:00">
+                2017-09-18
               </time>
             
 
@@ -383,9 +383,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/10/study/#comments" itemprop="discussionUrl">
+                <a href="/2017/09/18/csv/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/10/study/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/09/18/csv/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -393,7 +393,7 @@
 
           
           
-             <span id="/2017/09/10/study/" class="leancloud_visitors" data-flag-title="react-study">
+             <span id="/2017/09/18/csv/" class="leancloud_visitors" data-flag-title="Node使用stream导出CSV">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,17 +421,14 @@
       
 
       
-        <blockquote>
-<p>react首先面临的问题就是如何实现组件之间的传值，首当其冲就是父子组件之间的传值，原来是用angular开发，自从接触到react发现，更喜欢这种开发方式，感觉很舒服。<br><a id="more"></a></p>
-</blockquote>
-<ul>
-<li>父组件向子组件传值比较简单的，this.props就能实现，具体实现方式为：</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//子组件</span></div><div class="line"><span class="comment">//在子组件中直接用this.props.dataPlaceholder将值传递过来并且用placeholder接收</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span>(</div><div class="line">      &lt;Input style = &#123; InputStyle &#125; placeholder=&#123;<span class="keyword">this</span>.props.dataPlaceholder&#125; onChange=&#123;<span class="keyword">this</span>.props.onChange&#125; onBlur=&#123;<span class="keyword">this</span>.props.inputOnBlur&#125;/&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> InputComponent;</div><div class="line"></div><div class="line"><span class="comment">//父组件</span></div><div class="line"><span class="comment">//父组件中定义一个名为dataPlaceholder的自定义属性</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewCouponName</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="comment">// const &#123; onChange &#125;</span></div><div class="line">    <span class="keyword">return</span>(</div><div class="line">      &lt;div className=<span class="string">"coupon-input"</span>&gt;</div><div class="line">        &lt;span&gt;*名字&lt;<span class="regexp">/span&gt;</span></div><div class="line"><span class="regexp">        &lt;InputComponent dataPlaceholder="10个字以内" onBlur=&#123;this.inputOnBlur&#125; /</span>&gt;</div><div class="line">      &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">    )</span></div><div class="line"><span class="regexp">  &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">export default NewCouponName</span></div></pre></td></tr></table></figure>
-<ul>
-<li>子组件想父组件传参</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//父组件</span></div><div class="line"><span class="comment">//在父组件中要写一个方法来接收子组件传过来的值</span></div><div class="line"></div><div class="line">  <span class="comment">//  接收搜索的函数</span></div><div class="line">   handleSearchValue(params)&#123;</div><div class="line">     <span class="keyword">let</span> searchData = <span class="keyword">this</span>.state.searchData;</div><div class="line">     <span class="keyword">const</span> pagination = &#123; ...this.state.pagination &#125;</div><div class="line">     <span class="keyword">this</span>.setState(&#123;</div><div class="line">       pagination:&#123;</div><div class="line">         current:<span class="number">1</span>,</div><div class="line">       &#125;,</div><div class="line">       page:<span class="number">1</span>,</div><div class="line">       searchData:&#123;</div><div class="line">         ...params,</div><div class="line">       &#125;</div><div class="line">     &#125;,()=&gt;&#123;</div><div class="line">       <span class="keyword">let</span> &#123;searchData &#125; = <span class="keyword">this</span>.state;</div><div class="line">       <span class="keyword">this</span>.getData(&#123;</div><div class="line">           pageSize: pagination.pageSize,</div><div class="line">           page: <span class="number">1</span>,</div><div class="line">           ...searchData,</div><div class="line">         &#125;);</div><div class="line">     &#125;);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">  <span class="comment">//子组件</span></div><div class="line">  <span class="comment">//子组件在获取值的时候，调用父组件传过来的方法，并将获取的值传递过去</span></div><div class="line"></div><div class="line">   handleSearch = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    e.preventDefault();</div><div class="line">    <span class="keyword">this</span>.props.form.validateFields(<span class="function">(<span class="params">err, value,</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// 将子组件search文件中的值，传给父组件</span></div><div class="line">      <span class="keyword">this</span>.props.handleSearchValue(&#123;</div><div class="line">        ...values,</div><div class="line">      &#125;)</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+        <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>公司需求将8万条数据很快的导出，研究了一下，在老大的帮助下成功实现，记录流程希望能帮到你。</p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>如果说你想导出Excel可以看我之前的一篇文章，有关Excel导出的。<br><a id="more"></a></p>
+<h4 id="环境-Nodejs-作为后台语言"><a href="#环境-Nodejs-作为后台语言" class="headerlink" title="环境 Nodejs 作为后台语言"></a>环境 Nodejs 作为后台语言</h4><p>流（stream）在 Node.js 中是处理流数据的抽象接口（abstract interface）。 stream 模块提供了基础的 API 。使用这些 API 可以很容易地来构建实现流接口的对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123;Readable&#125; = <span class="built_in">require</span>(<span class="string">'stream'</span>)</div></pre></td></tr></table></figure></p>
+<p>声明一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">genCsv</span>(<span class="params">data, res</span>) </span>&#123;</div><div class="line">    <span class="comment">//  data [&#123;id: 1, code: aaa, money: 1&#125;, &#123;id: 2, code: bbb, money: 2&#125;]</span></div><div class="line">    <span class="keyword">let</span> csv = <span class="keyword">new</span> Readable</div><div class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">push</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        csv.push(<span class="string">`url\n`</span>)<span class="comment">// 这个是表头 </span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> data) &#123;</div><div class="line">        <span class="keyword">const</span> str = <span class="string">`<span class="subst">$&#123;i.code&#125;</span>,<span class="subst">$&#123;i.money&#125;</span>\n`</span> <span class="comment">// \n表示换行</span></div><div class="line">        csv.push(str)</div><div class="line">        &#125;</div><div class="line">        csv.push(<span class="literal">null</span>)<span class="comment">// 这个表示结束 </span></div><div class="line">    &#125;</div><div class="line">    push()</div><div class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/csv'</span>);</div><div class="line">    res.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">`attachment; filename=<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(<span class="string">'兑换码下载'</span>)&#125;</span>.csv`</span>);</div><div class="line">    <span class="comment">// csv.pipe(process.stdout) 结束但是这里直接返回res        </span></div><div class="line">    csv.pipe(res)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>export 一个方法暴露给用户，拿到参数去数据库查询。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">downloadBonusCsv</span>(<span class="params">req, res, rest: WxRest</span>) </span>&#123;</div><div class="line">     <span class="keyword">const</span> &#123;recordId&#125; = req.query</div><div class="line">     <span class="keyword">const</span> data = <span class="keyword">await</span> rest.query(<span class="string">`select id, code, money/100 as money from bonus where record_id = <span class="subst">$&#123;recordId&#125;</span>`</span>);</div><div class="line">     <span class="keyword">return</span> genCsv(data, res)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>到这里就大功告成了。</p>
+<p>参考文档：<a href="http://nodejs.cn/api/stream.html#stream_class_stream_readable" target="_blank" rel="external">http://nodejs.cn/api/</a></p>
+
       
     </div>
 
@@ -481,7 +478,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/react/" rel="tag"><i class="fa fa-tag"></i> react</a>
+            <a href="/tags/csv/" rel="tag"><i class="fa fa-tag"></i> csv</a>
           
         </div>
       
@@ -494,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/30/8月总结-1/" rel="next" title="8月份总结">
-                <i class="fa fa-chevron-left"></i> 8月份总结
+              <a href="/2017/09/15/mac/" rel="next" title="MAC全栈环境配置">
+                <i class="fa fa-chevron-left"></i> MAC全栈环境配置
               </a>
             
           </div>
@@ -503,10 +500,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/15/mac/" rel="prev" title="MAC全栈环境配置">
-                MAC全栈环境配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,8 +559,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -658,6 +660,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在前面"><span class="nav-number">1.1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境-Nodejs-作为后台语言"><span class="nav-number">1.2.</span> <span class="nav-text">环境 Nodejs 作为后台语言</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -802,9 +820,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://shiyachuang.github.io/2017/09/10/study/';
-          this.page.identifier = '2017/09/10/study/';
-          this.page.title = 'react-study';
+          this.page.url = 'https://shiyachuang.github.io/2017/09/18/csv/';
+          this.page.identifier = '2017/09/18/csv/';
+          this.page.title = 'Node使用stream导出CSV';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://shiyachuang.disqus.com/.disqus.com/embed.js';
