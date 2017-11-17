@@ -129,14 +129,14 @@
 <meta name="description" content="angular.js 学习 定义class的三种方法">
 <meta name="keywords" content="angular">
 <meta property="og:type" content="article">
-<meta property="og:title" content="angular学习">
+<meta property="og:title" content="angular整理">
 <meta property="og:url" content="https://shiyachuang.github.io/2017/07/12/angular/index.html">
 <meta property="og:site_name" content="年轻就要不停的奔跑">
 <meta property="og:description" content="angular.js 学习 定义class的三种方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-10T08:25:28.000Z">
+<meta property="og:updated_time" content="2017-11-16T06:55:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="angular学习">
+<meta name="twitter:title" content="angular整理">
 <meta name="twitter:description" content="angular.js 学习 定义class的三种方法">
 
 
@@ -171,7 +171,7 @@
 
 
 
-  <title>angular学习 | 年轻就要不停的奔跑</title>
+  <title>angular整理 | 年轻就要不停的奔跑</title>
   
 
 
@@ -352,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">angular学习</h1>
+          <h1 class="post-title" itemprop="name headline">angular整理</h1>
         
 
         <div class="post-meta">
@@ -393,7 +393,7 @@
 
           
           
-             <span id="/2017/07/12/angular/" class="leancloud_visitors" data-flag-title="angular学习">
+             <span id="/2017/07/12/angular/" class="leancloud_visitors" data-flag-title="angular整理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -424,7 +424,7 @@
         <h2 id="angular-js-学习"><a href="#angular-js-学习" class="headerlink" title="angular.js 学习"></a>angular.js 学习</h2><blockquote>
 <p>定义class的三种方法<br><a id="more"></a></p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">'myApp'</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">.red&#123;color: red;&#125;.red2&#123;color: #f0f;&#125;</span></div><div class="line"><span class="undefined">.red3&#123;color: #00f;&#125;.red4&#123;color: #2ff;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"myCtrl"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;&#123;red&#125;&#125;"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;true: 'red', false: 'red2'&#125;[isActive]"</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'red3': isSelected, 'red4': isCar&#125;"</span>&gt;</span>444<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules\angular\angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">	<span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, []);</span></div><div class="line"><span class="javascript">	app.controller(<span class="string">'myCtrl'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>) </span>&#123;</span></div><div class="line"><span class="javascript">		$scope.red=<span class="string">"red"</span>;</span></div><div class="line"><span class="javascript">	   	$scope.isActive = <span class="literal">false</span>;</span></div><div class="line"><span class="javascript">	    $scope.isSelected = <span class="literal">true</span>;</span></div><div class="line"><span class="javascript">	    $scope.isCar = <span class="literal">false</span>;</span></div><div class="line"><span class="undefined">	&#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">'myApp'</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">.red&#123;color: red;&#125;.red2&#123;color: #f0f;&#125;</span></div><div class="line"><span class="undefined">.red3&#123;color: #00f;&#125;.red4&#123;color: #2ff;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"myCtrl"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;&#123;red&#125;&#125;"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;true: 'red', false: 'red2'&#125;[isActive]"</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'red3': isSelected, 'red4': isCar&#125;"</span>&gt;</span>444<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules\angular\angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">	var app = angular.module('myApp', []);</span></div><div class="line"><span class="undefined">	app.controller('myCtrl', function($scope) &#123;</span></div><div class="line"><span class="undefined">		$scope.red="red";</span></div><div class="line"><span class="undefined">	   	$scope.isActive = false;</span></div><div class="line"><span class="undefined">	    $scope.isSelected = true;</span></div><div class="line"><span class="undefined">	    $scope.isCar = false;</span></div><div class="line"><span class="undefined">	&#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -584,7 +584,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -597,7 +597,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -822,7 +822,7 @@
         var disqus_config = function () {
           this.page.url = 'https://shiyachuang.github.io/2017/07/12/angular/';
           this.page.identifier = '2017/07/12/angular/';
-          this.page.title = 'angular学习';
+          this.page.title = 'angular整理';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://shiyachuang.disqus.com/.disqus.com/embed.js';

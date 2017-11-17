@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="let 块级作用域123456use strictif(true) &amp;#123;   let  fruit = &apos;apple&apos;&amp;#125;console.log(fruit) //fruit is not defined">
+<meta name="description" content="我一般会在周末更新一篇文章，不一定会是什么，有时候心血来潮就去看一些东西，别人写的ES6我可能觉得不太好，或者我用着不太方便，我就自己写我自己的、只是加强一边记忆而已。">
 <meta name="keywords" content="Es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6 study">
+<meta property="og:title" content="ES6">
 <meta property="og:url" content="https://shiyachuang.github.io/2017/07/21/ES6/index.html">
 <meta property="og:site_name" content="年轻就要不停的奔跑">
-<meta property="og:description" content="let 块级作用域123456use strictif(true) &amp;#123;   let  fruit = &apos;apple&apos;&amp;#125;console.log(fruit) //fruit is not defined">
+<meta property="og:description" content="我一般会在周末更新一篇文章，不一定会是什么，有时候心血来潮就去看一些东西，别人写的ES6我可能觉得不太好，或者我用着不太方便，我就自己写我自己的、只是加强一边记忆而已。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-10T08:25:28.000Z">
+<meta property="og:updated_time" content="2017-11-16T06:40:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6 study">
-<meta name="twitter:description" content="let 块级作用域123456use strictif(true) &amp;#123;   let  fruit = &apos;apple&apos;&amp;#125;console.log(fruit) //fruit is not defined">
+<meta name="twitter:title" content="ES6">
+<meta name="twitter:description" content="我一般会在周末更新一篇文章，不一定会是什么，有时候心血来潮就去看一些东西，别人写的ES6我可能觉得不太好，或者我用着不太方便，我就自己写我自己的、只是加强一边记忆而已。">
 
 
 
@@ -171,7 +171,7 @@
 
 
 
-  <title>ES6 study | 年轻就要不停的奔跑</title>
+  <title>ES6 | 年轻就要不停的奔跑</title>
   
 
 
@@ -352,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ES6 study</h1>
+          <h1 class="post-title" itemprop="name headline">ES6</h1>
         
 
         <div class="post-meta">
@@ -393,7 +393,7 @@
 
           
           
-             <span id="/2017/07/21/ES6/" class="leancloud_visitors" data-flag-title="ES6 study">
+             <span id="/2017/07/21/ES6/" class="leancloud_visitors" data-flag-title="ES6">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -422,12 +422,13 @@
 
       
         <hr>
+<blockquote>
+<p>我一般会在周末更新一篇文章，不一定会是什么，有时候心血来潮就去看一些东西，别人写的ES6我可能觉得不太好，或者我用着不太方便，我就自己写我自己的、只是加强一边记忆而已。</p>
+</blockquote>
+<a id="more"></a>
 <ul>
 <li><h4 id="let-块级作用域"><a href="#let-块级作用域" class="headerlink" title="let 块级作用域"></a>let 块级作用域</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">use strict</div><div class="line"></div><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>) &#123;</div><div class="line">   <span class="keyword">let</span>  fruit = <span class="string">'apple'</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//fruit is not defined</span></div></pre></td></tr></table></figure>
 </li>
-</ul>
-<a id="more"></a>
-<ul>
 <li><h4 id="const-常量"><a href="#const-常量" class="headerlink" title="const 常量"></a>const 常量</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> name = <span class="string">'apple'</span></div><div class="line">name = <span class="string">'banana'</span></div><div class="line"><span class="comment">//Assignment to constant variable</span></div><div class="line"><span class="keyword">const</span> name = &#123;<span class="attr">foo</span> : <span class="string">'apple'</span> &#125;</div><div class="line">name.foo = <span class="string">'banana'</span></div><div class="line"><span class="comment">//可以正常运行</span></div></pre></td></tr></table></figure>
 </li>
 <li><h5 id="解构数组"><a href="#解构数组" class="headerlink" title="解构数组"></a>解构数组</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> foo = [<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'three'</span>]</div><div class="line"><span class="keyword">let</span> [one,two,three] =foo</div><div class="line"><span class="built_in">console</span>.log(one,two,three)<span class="comment">// one,two,three</span></div></pre></td></tr></table></figure>
@@ -520,8 +521,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/15/react/" rel="next" title="react 学习">
-                <i class="fa fa-chevron-left"></i> react 学习
+              <a href="/2017/07/15/react/" rel="next" title="react demo">
+                <i class="fa fa-chevron-left"></i> react demo
               </a>
             
           </div>
@@ -617,7 +618,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -630,7 +631,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -855,7 +856,7 @@
         var disqus_config = function () {
           this.page.url = 'https://shiyachuang.github.io/2017/07/21/ES6/';
           this.page.identifier = '2017/07/21/ES6/';
-          this.page.title = 'ES6 study';
+          this.page.title = 'ES6';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://shiyachuang.disqus.com/.disqus.com/embed.js';

@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="父组件向子组件传函数定义父组件">
+<meta name="description" content="子组件调用父组件函数可能是最简单的一个函数了，如果有时间我会写两个稍微更好的例子。子组件调用父子间的函数，并把值传给父组件">
 <meta name="keywords" content="react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react 学习">
+<meta property="og:title" content="react demo">
 <meta property="og:url" content="https://shiyachuang.github.io/2017/07/15/react/index.html">
 <meta property="og:site_name" content="年轻就要不停的奔跑">
-<meta property="og:description" content="父组件向子组件传函数定义父组件">
+<meta property="og:description" content="子组件调用父组件函数可能是最简单的一个函数了，如果有时间我会写两个稍微更好的例子。子组件调用父子间的函数，并把值传给父组件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-10T08:25:28.000Z">
+<meta property="og:updated_time" content="2017-11-16T06:54:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react 学习">
-<meta name="twitter:description" content="父组件向子组件传函数定义父组件">
+<meta name="twitter:title" content="react demo">
+<meta name="twitter:description" content="子组件调用父组件函数可能是最简单的一个函数了，如果有时间我会写两个稍微更好的例子。子组件调用父子间的函数，并把值传给父组件">
 
 
 
@@ -171,7 +171,7 @@
 
 
 
-  <title>react 学习 | 年轻就要不停的奔跑</title>
+  <title>react demo | 年轻就要不停的奔跑</title>
   
 
 
@@ -352,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react 学习</h1>
+          <h1 class="post-title" itemprop="name headline">react demo</h1>
         
 
         <div class="post-meta">
@@ -393,7 +393,7 @@
 
           
           
-             <span id="/2017/07/15/react/" class="leancloud_visitors" data-flag-title="react 学习">
+             <span id="/2017/07/15/react/" class="leancloud_visitors" data-flag-title="react demo">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,9 +421,9 @@
       
 
       
-        <h4 id="父组件向子组件传函数"><a href="#父组件向子组件传函数" class="headerlink" title="父组件向子组件传函数"></a>父组件向子组件传函数</h4><p>定义父组件<br><a id="more"></a></p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React,  <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> Test <span class="keyword">from</span> <span class="string">'./Test'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">UIForm</span> <span class="keyword">extends</span> <span class="title">PureComponent</span> </span>&#123;</div><div class="line">handleChange = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(e)</div><div class="line">  &#125;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">           &lt;Test handleChange=&#123;<span class="keyword">this</span>.handleChange&#125; /&gt;</div><div class="line">        &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">      &lt;/</span>div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>定义子组件<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  onChange =<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.props.handleChange(e.target.value)</div><div class="line">  &#125;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;(ref)</span> =&gt;</span> (this.ref = ref)&#125; onChange=&#123;(e) =&gt; this.props.handleChange(e.target.value)&#125; /&gt;</span></div><div class="line"><span class="xml">  &#125;</span></div><div class="line"><span class="xml">&#125;</span></div></pre></td></tr></table></figure></p>
+        <h4 id="子组件调用父组件函数"><a href="#子组件调用父组件函数" class="headerlink" title="子组件调用父组件函数"></a>子组件调用父组件函数</h4><p>可能是最简单的一个函数了，如果有时间我会写两个稍微更好的例子。子组件调用父子间的函数，并把值传给父组件<br><a id="more"></a><br>定义父组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React,  <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> Test <span class="keyword">from</span> <span class="string">'./Test'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Father</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</div><div class="line">handleChange = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(val)</div><div class="line">  &#125;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;Test handleChange&#123;<span class="keyword">this</span>.handleChange /&gt;</div><div class="line">      &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">    )</span></div><div class="line"><span class="regexp">  &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+<p>定义子组件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  onChange =<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    <span class="comment">// 获取输入框的值 e.target.value，将值传给父组件</span></div><div class="line">    <span class="keyword">this</span>.props.handleChange(e.target.value)</div><div class="line">  &#125;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">onChange</span>=<span class="string">&#123;this.onChange&#125;</span> /&gt;</span></span></div><div class="line"><span class="xml">  &#125;</span></div><div class="line"><span class="xml">&#125;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -497,8 +497,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/21/ES6/" rel="prev" title="ES6 study">
-                ES6 study <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/21/ES6/" rel="prev" title="ES6">
+                ES6 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +584,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -597,7 +597,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -670,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#父组件向子组件传函数"><span class="nav-number">1.</span> <span class="nav-text">父组件向子组件传函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#子组件调用父组件函数"><span class="nav-number">1.</span> <span class="nav-text">子组件调用父组件函数</span></a></li></ol></div>
             
 
           </div>
@@ -822,7 +822,7 @@
         var disqus_config = function () {
           this.page.url = 'https://shiyachuang.github.io/2017/07/15/react/';
           this.page.identifier = '2017/07/15/react/';
-          this.page.title = 'react 学习';
+          this.page.title = 'react demo';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://shiyachuang.disqus.com/.disqus.com/embed.js';
