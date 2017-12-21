@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shiyachuang.github.io/"/>
-  <updated>2017-11-17T07:22:35.000Z</updated>
+  <updated>2017-12-21T04:36:39.000Z</updated>
   <id>https://shiyachuang.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iTerm2</title>
+    <link href="https://shiyachuang.github.io/2017/11/15/item2/"/>
+    <id>https://shiyachuang.github.io/2017/11/15/item2/</id>
+    <published>2017-11-15T14:09:21.000Z</published>
+    <updated>2017-12-21T04:36:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="iTerm-2"><a href="#iTerm-2" class="headerlink" title="iTerm 2"></a>iTerm 2</h4><p>整理使用 iTerm 2 过程中得常用快捷键，Mac 原来自带的终端工具 Terminal 不好用是出了名的，虽然最近几个版本苹果稍微做了些优化，功能上，可用性方面增强不少，无奈有个更好用的 Iterm2 摆在那，基本上也就没有多少出场机会了！<br><a id="more"></a><br>Iterm2，经常使用终端的同学肯定早就切换到这个东东上了，开源免费，和 zsh 搭配差不多已经取代 Terminal + bash 成了 Mac 上终端工具的标准配置。<br>列出几个常用的:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">标签</div><div class="line"></div><div class="line">新建标签：<span class="built_in">command</span> + t</div><div class="line"></div><div class="line">关闭标签：<span class="built_in">command</span> + w</div><div class="line"></div><div class="line">切换标签：<span class="built_in">command</span> + 数字 <span class="built_in">command</span> + 左右方向键</div><div class="line"></div><div class="line">切换全屏：<span class="built_in">command</span> + enter</div><div class="line"></div><div class="line">查找：<span class="built_in">command</span> + f</div><div class="line"></div><div class="line">清除当前行：ctrl + u</div><div class="line"></div><div class="line">到行首：ctrl + a</div><div class="line"></div><div class="line">到行尾：ctrl + e</div><div class="line"></div><div class="line">前进后退：ctrl + f/b (相当于左右方向键)</div><div class="line"></div><div class="line">清屏1：<span class="built_in">command</span> + r</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;iTerm-2&quot;&gt;&lt;a href=&quot;#iTerm-2&quot; class=&quot;headerlink&quot; title=&quot;iTerm 2&quot;&gt;&lt;/a&gt;iTerm 2&lt;/h4&gt;&lt;p&gt;整理使用 iTerm 2 过程中得常用快捷键，Mac 原来自带的终端工具 Terminal 不好用是出了名的，虽然最近几个版本苹果稍微做了些优化，功能上，可用性方面增强不少，无奈有个更好用的 Iterm2 摆在那，基本上也就没有多少出场机会了！&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="iTerm" scheme="https://shiyachuang.github.io/tags/iTerm/"/>
+    
+  </entry>
   
   <entry>
     <title>10月总结</title>
@@ -94,26 +114,6 @@
     
     
       <category term="小程序" scheme="https://shiyachuang.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iTerm2</title>
-    <link href="https://shiyachuang.github.io/2017/10/15/item2/"/>
-    <id>https://shiyachuang.github.io/2017/10/15/item2/</id>
-    <published>2017-10-15T14:09:21.000Z</published>
-    <updated>2017-12-21T04:32:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="第二阶段的总结"><a href="#第二阶段的总结" class="headerlink" title="第二阶段的总结"></a>第二阶段的总结</h4><p>整理使用 iTerm 2 过程中得常用快捷键，Mac 原来自带的终端工具 Terminal 不好用是出了名的，虽然最近几个版本苹果稍微做了些优化，功能上，可用性方面增强不少，无奈有个更好用的 Iterm2 摆在那，基本上也就没有多少出场机会了！<br><a id="more"></a></p><ol><li><p>Iterm2，经常使用终端的同学肯定早就切换到这个东东上了，开源免费，和 zsh 搭配差不多已经取代 Terminal + bash 成了 Mac 上终端工具的标准配置。</p></li><li><p>列出几个常用的:</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">标签</div><div class="line"></div><div class="line">新建标签：<span class="built_in">command</span> + t</div><div class="line"></div><div class="line">关闭标签：<span class="built_in">command</span> + w</div><div class="line"></div><div class="line">切换标签：<span class="built_in">command</span> + 数字 <span class="built_in">command</span> + 左右方向键</div><div class="line"></div><div class="line">切换全屏：<span class="built_in">command</span> + enter</div><div class="line"></div><div class="line">查找：<span class="built_in">command</span> + f</div><div class="line"></div><div class="line">清除当前行：ctrl + u</div><div class="line"></div><div class="line">到行首：ctrl + a</div><div class="line"></div><div class="line">到行尾：ctrl + e</div><div class="line"></div><div class="line">前进后退：ctrl + f/b (相当于左右方向键)</div><div class="line"></div><div class="line">清屏1：<span class="built_in">command</span> + r</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;第二阶段的总结&quot;&gt;&lt;a href=&quot;#第二阶段的总结&quot; class=&quot;headerlink&quot; title=&quot;第二阶段的总结&quot;&gt;&lt;/a&gt;第二阶段的总结&lt;/h4&gt;&lt;p&gt;整理使用 iTerm 2 过程中得常用快捷键，Mac 原来自带的终端工具 Terminal 不好用是出了名的，虽然最近几个版本苹果稍微做了些优化，功能上，可用性方面增强不少，无奈有个更好用的 Iterm2 摆在那，基本上也就没有多少出场机会了！&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="iTerm" scheme="https://shiyachuang.github.io/tags/iTerm/"/>
     
   </entry>
   
@@ -311,7 +311,7 @@
     <published>2017-07-11T16:23:06.000Z</published>
     <updated>2017-11-16T06:55:17.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="angular-js-学习"><a href="#angular-js-学习" class="headerlink" title="angular.js 学习"></a>angular.js 学习</h2><blockquote><p>定义class的三种方法<br><a id="more"></a></p></blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">'myApp'</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">.red&#123;color: red;&#125;.red2&#123;color: #f0f;&#125;</span></div><div class="line"><span class="undefined">.red3&#123;color: #00f;&#125;.red4&#123;color: #2ff;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"myCtrl"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;&#123;red&#125;&#125;"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;true: 'red', false: 'red2'&#125;[isActive]"</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'red3': isSelected, 'red4': isCar&#125;"</span>&gt;</span>444<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules\angular\angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">var app = angular.module('myApp', []);</span></div><div class="line"><span class="undefined">app.controller('myCtrl', function($scope) &#123;</span></div><div class="line"><span class="undefined">$scope.red="red";</span></div><div class="line"><span class="undefined">   $scope.isActive = false;</span></div><div class="line"><span class="undefined">    $scope.isSelected = true;</span></div><div class="line"><span class="undefined">    $scope.isCar = false;</span></div><div class="line"><span class="undefined">&#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="angular-js-学习"><a href="#angular-js-学习" class="headerlink" title="angular.js 学习"></a>angular.js 学习</h2><blockquote><p>定义class的三种方法<br><a id="more"></a></p></blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">'myApp'</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">.red&#123;color: red;&#125;.red2&#123;color: #f0f;&#125;</span></div><div class="line"><span class="undefined">.red3&#123;color: #00f;&#125;.red4&#123;color: #2ff;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"myCtrl"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;&#123;red&#125;&#125;"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;true: 'red', false: 'red2'&#125;[isActive]"</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'red3': isSelected, 'red4': isCar&#125;"</span>&gt;</span>444<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules\angular\angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript"><span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, []);</span></div><div class="line"><span class="javascript">app.controller(<span class="string">'myCtrl'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>) </span>&#123;</span></div><div class="line"><span class="javascript">$scope.red=<span class="string">"red"</span>;</span></div><div class="line"><span class="javascript">   $scope.isActive = <span class="literal">false</span>;</span></div><div class="line"><span class="javascript">    $scope.isSelected = <span class="literal">true</span>;</span></div><div class="line"><span class="javascript">    $scope.isCar = <span class="literal">false</span>;</span></div><div class="line"><span class="undefined">&#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
